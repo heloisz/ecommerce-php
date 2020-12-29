@@ -1,0 +1,45 @@
+- fazer a opção "ESQUECI A SENHA" (ENVIAR EMAIL MANDANDO UM CÓDIGO PARA ALTERAR PRA UMA NOVA SENHA)
+
+- FINALIZAR O ITEM G 
+g) Quando logado como cliente ? dar acesso à “área do usuário” através de link/botão:
+i) Permitir alteração de dados pessoais e senha (repetir processo de digitação de senha,
+confirmação de senha, força da senha e função hash MD5).
+ii) Link/botão para apresentar o histórico de compras do cliente (todas as compras já realizadas
+pelo cliente no site).
+
+= FINALIZAR O TIEM H
+h) Quando logado como administrador ? sistema que gerencia o site e dá manutenção nas tabelas
+do banco de dados. Usuário admin poderá criar outros usuários, tanto do tipo cliente, quanto do
+tipo administrador.
+(i) Inclusão
+(ii) Alteração
+(iii) Exclusão lógica
+(iv) Pesquisas (filtros) e ordenação de resultados:
+• Para a tabela de produtos ? visualização geral dos produtos, filtrar por código, nome,
+descrição, preço, cor, tamanho, marca, modelo etc., podendo ser uma composição de
+duas ou mais opções de pesquisa escolhidas pelo admin.
+• Para a tabela de clientes ? desativação e reativação de conta de cliente (exclusão lógica),
+pesquisa geral, filtros (por id, nome, login, e-mail), ordenação de visualização de
+resultados (por id, nome, login, e-mail).
+• Para a tabela de vendas ? visualização de todas as vendas, ao clicar em uma venda mostrar
+todos os itens dessa venda, filtrar por data da venda, por produto, por número (código)
+da venda.
+
+CTI - COLÉGIO TÉCNICO INDUSTRIAL "PROF ISAAC PORTAL ROLDÁN"
+
+UNIVERSIDADE ESTADUAL PAULISTA - UNESP
+
+4
+
+Campus de Bauru
+
+• Para as outras tabelas, observe que as possibilidades de pesquisa irão variar de acordo com
+os campos de cada tabela e das necessidades do seu sistema de e-commerce.
+(v) Relatórios/Estatísticas numéricas ou por gráfico:
+1. Quantidade e porcentagem de vendas de todos os produtos;
+2. Faturamento de vendas por período (mensal, semanal ou da data inicial até a data final
+digitadas)
+3. Quantidade e porcentagem de vendas de produtos por período a escolher (mensal, semanal
+ou da data inicial até a data final);
+4. Produtos mais vendidos por faixa etária (definir as faixas);
+5. Preferências de compra por gênero masculino e feminino;

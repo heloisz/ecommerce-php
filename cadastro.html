@@ -1,0 +1,234 @@
+<!--
+Histórico de Atualizações
+    Leandro e Rafael - 14/09/2020 - 18h59min
+    Luís - 17/09/2020 - 15h36min
+    Heloísa - 20/09/2020 - 16h30min
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="imagens/estilo.css" rel="stylesheet">
+    <title>Cadastro</title>	
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(imagens/bg_cadastro.jpg);
+        }
+    </style>
+    <font face="Arial">
+    <div class="header">
+        <div class="content_header">
+            <a href="index.php">
+                <img class="header" src="imagens/logo.png" alt="Site Oficial">
+            </a>
+
+            <div class="busca_header">
+                <form method="post" action="pesquisa.php">
+                    <input type="text" name="busca" class="busca" placeholder="O que você procura?"/>
+                    <button class="busca_header" type="submit">
+                       <img class="buscar_header" src="imagens/icone_buscar.png">
+                    </button>
+                </form>
+            </div> <!-- final busca_header -->
+
+            <div>
+                <img class="carrinho_icone" src="imagens/carrinho_vazio.png">
+            </div>
+            <br>
+            <div class="links_header">
+               <div class="link_header"></div>
+                <a class="links_header" href="index.php">HOME</a>
+                <a class="links_header" href="produtos.php">PRODUTOS</a>
+                <a class="links_header" href="developers.php">DEVELOPERS</a>
+            </div> <!-- final links_header -->
+            <div class="usuario_header">
+                <img class="usuario_header" src="imagens/icone_usuario.png">
+                <a class="usuario_header" href="login.html"><label>LOGIN</label></a> <!----- destino: ------->
+                <label class="usuario_header">|</label>
+                <a class="usuario_header" href=""><label>CADASTRO</label></a> <!----- destino: ------->
+
+            </div> <!-- final usuario_header -->
+        </div> <!-- final content_header -->
+    </div> <!-- final header -->
+    <div id="espaco"></div>
+    
+    <font face="Arial" size="2">
+       <div class="cadastro_content">
+          <h1 align=center style="color: #333">CADASTRE-SE</h1>
+           <div class="cadastro">
+                <form action= "concluir_cadastro.php" method="post">
+                    <!------ NOME ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="text" name="nome" placeholder=" " autocomplete="off" required>
+                        <label>Nome*</label>    
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ SOBRENOME ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="text" name="sobrenome" placeholder=" " required>
+                        <label>Sobrenome*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ EMAIL ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="email" name="mail" placeholder=" " required>
+                        <label>Email*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ SEXO ------>
+                    <div class="select_sexo">
+                        <label class="select_sexo">Sexo*</label><br>
+                        <select name="genero" class="select_sexo" required>
+                           <option selected></option>
+                            <option value="F">Feminino</option>	
+                            <option value="M">Masculino</option>
+                            <option value="O">Outro</option>
+                        </select>
+                    </div>
+                    <script>
+                    function verifica()
+                    {
+                      senha= document.getElementById("senha").value;
+                        forca=0;
+                        mostra=document.getElementById("mostra");
+                        if((senha.length>=4)&&(senha.length<=7)){
+                            forca += 10;
+                        }else if(senha.length>8){
+                            forca += 25;
+                        }
+                        if(senha.match(/[a-z]+/)){
+                            forca += 10; 
+                        }if(senha.match(/[A-Z]+/)){
+		                      forca += 20;
+	                    }
+	                     if(senha.match(/!@#$%+/)){
+		                      forca += 20;
+	                    }
+	                     if(senha.match(/[0-9]+/)){
+		                      forca += 25;
+	                    }
+	                     return mostra_res();
+                    }
+                    function mostra_res(){
+	                   if(forca < 30){
+		                      mostra.innerHTML = '<tr><td bgcolor="red" width="'+forca+'"></td><td>Fraca </td></tr>';
+	                   }else if((forca >= 30) && (forca < 60)){
+		                      mostra.innerHTML = '<tr><td bgcolor="yellow" width="'+forca+'"></td><td>Justa </td></tr>';;
+	                   }else if((forca >= 60) && (forca < 85)){
+		                      mostra.innerHTML = '<tr><td bgcolor="blue" width="'+forca+'"></td><td>Forte </td></tr>';
+	                   }else{
+		                      mostra.innerHTML = '<tr><td bgcolor="green" width="'+forca+'"></td><td>Excelente </td></tr>';
+	                        }
+                     }                           
+                    </script>
+        
+                    <div class="cadastro">
+                        <table id="mostra"></table>
+                        <input class="imp_cadastro" type="password" name="senha" id="senha" onkeyup="javascript:verifica()" minlength="8" maxlength="18" placeholder=" " required>
+                        <label>Senha (8-18 caracteres)*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="password" name="confirma_senha" minlength="8" maxlength="18" placeholder=" " required>
+                        <label>Confirma Senha*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ DATA DE NASCIMENTO ------>
+                    <div class="select_sexo">
+                        <label class="select_sexo">Data de nascimento</label><br>
+                        <div class="data_nasc_cad">
+                            <input type="date" class="data_nasc_cad" name="data_nascimento" autocomplete="off">
+                        </div>
+                    </div>
+                    <br><br>
+                    <!------ ESTADO ------>
+                    <div class="select_sexo">
+                        <label class="select_sexo">Estado*</label><br>
+                        <select class="select_sexo" name="estado" required>
+                           <option selected></option>
+                            <option value= "AC">Acre</option>
+                            <option value= "AL">Alagoas</option>
+                            <option value= "AP">Amapá</option>
+                            <option value= "AM">Amazonas</option>
+                            <option value= "BA">Bahia</option>
+                            <option value= "CE">Ceará</option>
+                            <option value= "ES">Espírito Santo</option>
+                            <option value= "GO">Goiás</option>
+                            <option value= "MA">Maranhão</option>
+                            <option value= "MT">Mato Grosso</option>
+                            <option value= "MS">Mato Grosso do Sul</option>
+                            <option value= "MG">Minas Gerais</option>
+                            <option value= "PA">Pará</option>
+                            <option value= "PB">Paraíba</option>
+                            <option value= "PR">Paraná</option>
+                            <option value= "PE">Pernambuco</option>
+                            <option value= "PI">Píaui</option>
+                            <option value= "RJ">Rio de Janeiro</option>
+                            <option value= "RN">Rio Grande do Norte</option>
+                            <option value= "RS">Rio Grande do Sul</option>
+                            <option value= "RO">Rôndonia</option>
+                            <option value= "RR">Roraima</option>
+                            <option value= "SC">Santa Catarina</option>
+                            <option value= "SP">São Paulo</option>
+                            <option value= "SE">Sergipe</option>
+                            <option value= "TO">Tocantins</option>
+                            <option value= "DF">Distrito Federal</option>
+                        </select>
+                    </div>
+                    <!------ CIDADE ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="text" name="cidade" maxlength="40" placeholder=" " required>
+                        <label>Cidade*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ BAIRRO ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="text" name="bairro" maxlength="40" placeholder=" " required>
+                        <label>Bairro*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ RUA ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="text" name="rua" maxlength="40" placeholder=" " required>
+                        <label>Rua*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ NÚMERO ------>
+                    <div class="cadastro">
+                        <input class="imp_cadastro" type="number" name="numero" maxlength="4" placeholder=" " required>
+                        <label>Número*</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <!------ SUBMIT ------>
+                    <div class="btn_submit">
+                       <center>
+                         <input class="btn_submit" type="submit">   
+                       </center>
+                    </div>
+                </form>
+            </div>
+       </div>
+    </font>
+    <footer id="footer"> <!--------- RODAPÉ - início ---------->
+   <br>
+    <a class="links_header" href="index.php">HOME</a>
+    <a class="links_header" href="produtos.php">PRODUTOS</a>
+    <a class="links_header" href="developers.php">DEVELOPERS</a>
+    <br><br><br>
+    <label class="footer">16 - Heloísa</label>
+    <label class="footer">18 - João</label>
+    <label class="footer">20 - Leandro</label>
+    <br>
+    <label class="footer">23 - Leonardo</label>
+    <label class="footer">27 - Luís</label>
+    <label class="footer">28 - Rafael</label>
+    <br><br><br>
+</footer><!--------- RODAPÉ - fim ---------->
+    </font>
+</body>
+</html>

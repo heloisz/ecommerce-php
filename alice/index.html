@@ -1,0 +1,74 @@
+<style>
+    body{
+        background-image: url('imagens/bg_home.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    a.left:link {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    a.left:hover {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to top, rgba(255, 0, 0, 0.671), rgba(255,0,0,0));
+    }
+
+    a.right:link {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+    a.right:hover {
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: linear-gradient(to top, rgba(0, 204, 255, 0.63), rgba(255,0,0,0));
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projeto ALICE</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <a href="https://br.leagueoflegends.com/pt-br/" target="_blank">
+                <img class="header" src="imagens/lol_logo.png" alt="Site Oficial">
+            </a>
+            <a class="home" href="index.html" style="left: 300px;">HOME</a>
+        </div>
+
+        <br><br>
+        <img src="imagens/menu_home.png" class="center_index" style="height: 95%;">
+
+        <a class="left" href="usuario_login.html"></a>
+        <a class="right" href="adm.html"></a>
+
+        <footer>
+            <br><br>
+            Projeto ALICE
+            <br><br><br>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+CREATE TABLE usuario
+(
+    nome CHARACTER VARYING(30),
+    nome_de_invocador CHARACTER VARYING(16) PRIMARY KEY,
+    email CHARACTER VARYING(30),
+    senha CHARACTER VARYING(30),
+    lane CHARACTER VARYING(8),
+    main CHARACTER VARYING(30),
+    excluido CHARACTER(1)
+);

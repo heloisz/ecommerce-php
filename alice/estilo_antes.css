@@ -1,0 +1,231 @@
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:  80px;
+    z-index: 3;
+    background-color: #0f0f0f;
+}
+
+#espaco{
+    position: static;
+    height: 80px;
+}
+
+img.header {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    width: 8%;
+}
+
+a.home:link, a.home:visited {
+    background-color: #0f0f0f;
+    color: white;
+    padding-top: 35px;
+    margin: 0;
+    text-align: center; 
+    text-decoration: none;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    height: 40px;
+    width: fit-content;
+}
+a.home:hover, a.home:active {
+    border-bottom: 5px solid;
+    border-bottom-color: turquoise;
+}
+
+/*  
+          <div id="header">
+            <a href="https://br.leagueoflegends.com/pt-br/" target="_blank">
+                <img class="header" src="imagens/lol_logo.png" alt="Site Oficial">
+            </a>
+            <p align="center">
+                <a class="home" href="index.html">HOME</a>
+            </p>
+        </div>
+
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 0;
+    margin-bottom: 0;
+}*/
+
+footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: white;
+    z-index: 3;
+}
+
+.center_index {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 73%;
+}
+
+fieldset.sobre {
+    background-color: rgba(0,0,0, 0.7);
+    border:0;
+    display: block;
+    position: static;
+    top: 180px;
+    right: 0;
+    padding: 50px;
+    margin: 50px;
+    width: 70%;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 80px;
+    font-family: "Cambria";
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+h2{
+    font-family: "Cambria";
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #7e633b;
+}
+
+P{
+    font-family: "Cambria";
+    font-weight: bold;
+    color: #fff;
+}
+
+div.content{
+    width: 700px;
+    margin: auto;
+    position: relative; 
+}
+
+input[type=text]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #7e633b;
+    font-size: 30px;
+    color: #fff;
+    width: 500px;
+}
+
+input[type=password]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #7e633b;
+    font-size: 30px;
+    color: #fff;
+    width: 500px;
+}
+
+input[type=email]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #7e633b;
+    font-size: 30px;
+    color: #fff;
+    width: 500px;
+}
+
+#divisor{
+    width: 700px;
+    margin: 0px auto;
+    position: relative;
+}
+
+#submit_button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    background: black;
+    border-color: #7e633b;
+    font-family: "Cambria";
+    font-weight: 900;
+    font-size: 15px;
+    color: #7e633b;
+    letter-spacing: 7px;
+}
+
+a:link{
+    color: #e0ba82;
+}
+
+a:visited{
+    color: #d48c22;
+}
+
+a:hover{
+    color: #9c6719;
+}
+
+input[type=checkbox]{
+    all: unset;
+    border: 1px solid white;
+    width: 20px;
+    height: 15px;
+    display: inline-flex;
+}
+
+input:checked{
+    background-color: #7e633b;
+}
+
+label.checkbox{
+    font-size: 15px;
+}
+
+
+/*-----------ALERTA DE ERRO--------*/
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}   
+
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+.closebtn:hover {
+    color: black;
+}

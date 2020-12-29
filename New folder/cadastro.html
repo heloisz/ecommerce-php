@@ -1,0 +1,79 @@
+<!--
+Histórico de Atualizações
+    Leandro e Rafael - 14/09/2020 - 18h59min
+    Luís - 17/09/2020 - 15h36min 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>	
+</head>
+<body>
+    <font face="Arial" size="2">
+        <hr>
+        <form action= "concluir_cadastro.php" method="post">
+            <!------ NOME ------>
+            Nome:<br><input type="text" name="nome" required><br><br>
+            <!------ SOBRENOME ------>
+            Sobrenome:<br><input type="text" name="sobrenome" required><br><br>
+            <!------ EMAIL ------>
+            Email:<br><input type="email" name="mail" required><br><br>
+            <!------ SEXO ------>
+            Sexo:<br><select name= "genero" required>
+                <option value="F">Feminino</option>	
+                <option value="M">Masculino</option>
+                <option value="O">Outro</option>
+            </select><br><br>
+            <!------ SENHA ------>
+            Senha:<br><input type="password" name="senha" maxlength="40" required><br><br>
+            Confirmar senha:<br><input type="password" name="confirma_senha" maxlength="40" required><br><br>
+            <!------ DATA DE NASCIMENTO ------>
+            Data de nascimento:<br><input type="date" name="data_nascimento"  min= "1960-01-01"><br><br>
+            <!------ ESTADO ------>
+            Estado:<br>
+            <select name= "estado" required>
+                <option value= "AC">Acre</option>
+                <option value= "AL">Alagoas</option>
+                <option value= "AP">Amapá</option>
+                <option value= "AM">Amazonas</option>
+                <option value= "BA">Bahia</option>
+                <option value= "CE">Ceará</option>
+                <option value= "ES">Espírito Santo</option>
+                <option value= "GO">Goiás</option>
+                <option value= "MA">Maranhão</option>
+                <option value= "MT">Mato Grosso</option>
+                <option value= "MS">Mato Grosso do Sul</option>
+                <option value= "MG">Minas Gerais</option>
+                <option value= "PA">Pará</option>
+                <option value= "PB">Paraíba</option>
+                <option value= "PR">Paraná</option>
+                <option value= "PE">Pernambuco</option>
+                <option value= "PI">Píaui</option>
+                <option value= "RJ">Rio de Janeiro</option>
+                <option value= "RN">Rio Grande do Norte</option>
+                <option value= "RS">Rio Grande do Sul</option>
+                <option value= "RO">Rôndonia</option>
+                <option value= "RR">Roraima</option>
+                <option value= "SC">Santa Catarina</option>
+                <option value= "SP">São Paulo</option>
+                <option value= "SE">Sergipe</option>
+                <option value= "TO">Tocantins</option>
+                <option value= "DF">Distrito Federal</option>
+            </select>
+            <br><br>
+            <!------ CIDADE ------>
+            Cidade: <br><input type="text" name = "cidade" required> <br><br>
+            <!------ BAIRRO ------>
+            Bairro: <br><input type="text" name="bairro" required> <br><br>
+            <!------ RUA ------>
+            Rua: <br><input type="text" name="rua" required> <br><br>
+            <!------ NÚMERO ------>
+            Número:<br> <input type="number" name="numero" required><br><br>
+            <input type="submit">
+        </form>
+    </font>
+</body>
+</html>
